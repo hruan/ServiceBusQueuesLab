@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using ServiceBusLab.Shared.Domain;
+using ServiceBusQueuesLab.Shared.Domain;
 
 namespace ServiceBusQueuesLab.Contracts
 {
