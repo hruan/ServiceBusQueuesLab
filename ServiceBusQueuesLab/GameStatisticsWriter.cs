@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Microsoft.ServiceBus.Messaging;
+using Microsoft.WindowsAzure;
 using ServiceBusQueuesLab.Contracts;
 using ServiceBusQueuesLab.Shared.Domain;
 

@@ -5,16 +5,25 @@ using ServiceBusQueuesLab.Contracts;
 
 namespace ServiceBusQueuesLab
 {
-    public static class MessageProcessor
+    public class MessageProcessor
     {
-        public static Task ProcessMessageAsync(BrokeredMessage message)
+        private readonly IStatisticsProcesser _processer = new StatisticsProcesser();
+        private readonly IGameStatisticsWriter _writer = new GameStatisticsWriter();
+
+        public MessageProcessor(IStatisticsProcesser processer, IGameStatisticsWriter writer)
         {
-            return ActualProcessAsync(new StatisticsProcesser(), new GameStatisticsWriter(), message);
+            _processer = processer;
+            _writer = writer;
         }
 
-        private static Task ActualProcessAsync(
-            IStatisticsProcesser decider,
-            IGameStatisticsWriter publisher,
+        public Task ProcessMessageAsync(BrokeredMessage message)
+        {
+            return ActualProcessAsync(_processer, _writer, message);
+        }
+
+        private static async Task ActualProcessAsync(
+            IStatisticsProcesser processer,
+            IGameStatisticsWriter writer,
             BrokeredMessage message)
         {
             throw new NotImplementedException();

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.ServiceBus.Messaging;
 using ServiceBusQueuesLab.Contracts;
 
 namespace ServiceBusQueuesLab.Infrastructure
@@ -16,10 +17,11 @@ namespace ServiceBusQueuesLab.Infrastructure
             cts.Cancel();
         }
 
-        private static async Task Run(IQueueFactory queueFactory)
+        private static void Run(IQueueFactory queueFactory)
         {
-            var q = await queueFactory.CreateQueueAsync();
-            q.OnMessageAsync(MessageProcessor.ProcessMessageAsync);
+            var processor = new MessageProcessor(new StatisticsProcesser(), new GameStatisticsWriter());
+            var q = queueFactory.Create();
+            q.OnMessageAsync(processor.ProcessMessageAsync, new OnMessageOptions {AutoComplete = false});
         }
     }
 }

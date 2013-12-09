@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using ServiceBusQueuesLab.Shared.Domain;
+﻿using ServiceBusQueuesLab.Shared.Domain;
 
 namespace ServiceBusQueuesLab.Contracts
 {
@@ -8,6 +7,6 @@ namespace ServiceBusQueuesLab.Contracts
         /// <summary>
         /// Given a game crunch the game statistics
         /// </summary>
-        Task<GameStatistics> ProcessAsync(GameData game);
+        GameStatistics Process(GameData game);
     }
 }

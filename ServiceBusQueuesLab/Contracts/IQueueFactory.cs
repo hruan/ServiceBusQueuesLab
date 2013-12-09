@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Microsoft.ServiceBus.Messaging;
+﻿using Microsoft.ServiceBus.Messaging;
 
 namespace ServiceBusQueuesLab.Contracts
 {
@@ -10,6 +9,6 @@ namespace ServiceBusQueuesLab.Contracts
         /// processing
         /// </summary>
         /// <returns></returns>
-        Task<QueueClient> CreateQueueAsync();
+        QueueClient Create();
     }
 }

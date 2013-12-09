@@ -1,12 +1,12 @@
-﻿using System.Threading.Tasks;
-using Microsoft.ServiceBus.Messaging;
+﻿using Microsoft.ServiceBus.Messaging;
+using Microsoft.WindowsAzure;
 using ServiceBusQueuesLab.Contracts;
 
 namespace ServiceBusQueuesLab
 {
     public class ServiceBusQueueFactory : IQueueFactory
     {
-        public Task<QueueClient> CreateQueueAsync()
+        public QueueClient Create()
         {
             throw new System.NotImplementedException();
         }
