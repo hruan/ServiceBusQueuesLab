@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.ServiceBus.Messaging;
-using ServiceBusLab;
 using ServiceBusQueuesLab.Contracts;
 
 namespace ServiceBusQueuesLab

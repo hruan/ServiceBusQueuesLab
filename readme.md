@@ -25,14 +25,15 @@ data:
     }
 
 Additionally, each message header also contains the name of another queue
-entity to which the game results are to be sent.
+entity to which the game statistics are to be sent.
 
 The service needs to accomplish the following steps:
 
 - Receive messages from the queue
 - Extract the game data from the message body
 - Determine the outcome, as well as some other statistics of the game
-- Reply to the queue entity in the message header with the game statistics
+- Reply to the queue entity, retrieved from the message header, with the game
+  statistics
 
 ## Get started
 
@@ -44,4 +45,3 @@ The service needs to accomplish the following steps:
 5. Substitute ``NotImplementedException`` with working implementation
 6. (Optional) Climb to the top on the scoreboard! ("ClientId"-property
    needs to be set on outgoing message.)
-

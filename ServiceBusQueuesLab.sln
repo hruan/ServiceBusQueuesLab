@@ -8,7 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		readme.md = readme.md
 	EndProjectSection
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ServiceBusLabQueues.Shared", "ServiceBusQueuesLab.Shared\ServiceBusLabQueues.Shared.fsproj", "{0807A250-633E-4409-A5E6-7D7C531BA5A4}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ServiceBusQueuesLab.Shared", "ServiceBusQueuesLab.Shared\ServiceBusQueuesLab.Shared.fsproj", "{0807A250-633E-4409-A5E6-7D7C531BA5A4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBusQueuesLab", "ServiceBusQueuesLab\ServiceBusQueuesLab.csproj", "{B5009C3F-15CE-456E-A187-B3091EBC26F5}"
 EndProject

@@ -67,9 +67,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ServiceBusQueuesLab.Shared\ServiceBusLabQueues.Shared.fsproj">
+    <ProjectReference Include="..\ServiceBusQueuesLab.Shared\ServiceBusQueuesLab.Shared.fsproj">
       <Project>{0807a250-633e-4409-a5e6-7d7c531ba5a4}</Project>
-      <Name>ServiceBusLabQueues.Shared</Name>
+      <Name>ServiceBusQueuesLab.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
