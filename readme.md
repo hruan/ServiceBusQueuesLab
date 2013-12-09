@@ -45,3 +45,8 @@ The service needs to accomplish the following steps:
 5. Substitute ``NotImplementedException`` with working implementation
 6. (Optional) Climb to the top on the scoreboard! ("ClientId"-property
    needs to be set on outgoing message.)
+
+## Documentation
+
+- http://www.windowsazure.com/en-us/develop/net/how-to-guides/service-bus-queues/
+- http://msdn.microsoft.com/en-us/library/microsoft.servicebus.messaging.aspx
