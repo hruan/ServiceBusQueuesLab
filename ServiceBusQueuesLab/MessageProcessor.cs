@@ -5,23 +5,9 @@ using ServiceBusQueuesLab.Contracts;
 
 namespace ServiceBusQueuesLab
 {
-    public class MessageProcessor
+    public static class MessageProcessor
     {
-        private readonly IStatisticsProcesser _processer = new StatisticsProcesser();
-        private readonly IStatisticsWriter _writer = new StatisticsWriter();
-
-        public MessageProcessor(IStatisticsProcesser processer, IStatisticsWriter writer)
-        {
-            _processer = processer;
-            _writer = writer;
-        }
-
-        public Task ProcessMessageAsync(BrokeredMessage message)
-        {
-            return ActualProcessAsync(_processer, _writer, message);
-        }
-
-        private static Task ActualProcessAsync(
+        public static Task ProcessAsync(
             IStatisticsProcesser processer,
             IStatisticsWriter writer,
             BrokeredMessage message)

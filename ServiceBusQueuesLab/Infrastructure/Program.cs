@@ -11,17 +11,24 @@ namespace ServiceBusQueuesLab.Infrastructure
         private static void Main(string[] args)
         {
             var cts = new CancellationTokenSource();
-            Task.Run(() => Run(new ServiceBusQueueFactory()), cts.Token);
+            Task.Run(() =>
+                Run(new ServiceBusQueueFactory(),
+                    new StatisticsProcesser(),
+                    new StatisticsWriter()),
+                cts.Token);
 
             Console.ReadLine();
             cts.Cancel();
         }
 
-        private static void Run(IQueueFactory queueFactory)
+        private static void Run(
+            IQueueFactory queueFactory,
+            IStatisticsProcesser processer,
+            IStatisticsWriter writer)
         {
-            var processor = new MessageProcessor(new StatisticsProcesser(), new StatisticsWriter());
             var q = queueFactory.Create();
-            q.OnMessageAsync(processor.ProcessMessageAsync, new OnMessageOptions {AutoComplete = false});
+            q.OnMessageAsync(msg => MessageProcessor.ProcessAsync(processer, writer, msg),
+                new OnMessageOptions {AutoComplete = false});
         }
     }
 }
