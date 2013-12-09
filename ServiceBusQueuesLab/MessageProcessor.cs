@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.ServiceBus.Messaging;
-using ServiceBusLab.Contracts;
+using ServiceBusLab;
+using ServiceBusQueuesLab.Contracts;
 
-namespace ServiceBusLab
+namespace ServiceBusQueuesLab
 {
     public static class MessageProcessor
     {

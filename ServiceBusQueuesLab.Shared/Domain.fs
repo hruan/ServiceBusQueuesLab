@@ -1,4 +1,4 @@
-﻿namespace ServiceBusLab.Shared.Domain
+﻿namespace ServiceBusQueuesLab.Shared.Domain
 
 open System
 open System.Runtime.Serialization

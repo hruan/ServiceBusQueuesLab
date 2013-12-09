@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using ServiceBusLab.Shared.Domain;
 
-namespace ServiceBusLab.Contracts
+namespace ServiceBusQueuesLab.Contracts
 {
     public interface IGameStatisticsWriter
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using ServiceBusLab.Contracts;
 using ServiceBusLab.Shared.Domain;
+using ServiceBusQueuesLab.Contracts;
 
-namespace ServiceBusLab
+namespace ServiceBusQueuesLab
 {
     public class StatisticsProcesser : IStatisticsProcesser
     {

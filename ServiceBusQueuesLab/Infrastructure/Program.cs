@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using ServiceBusLab.Contracts;
+using ServiceBusQueuesLab.Contracts;
 
-namespace ServiceBusLab.Infrastructure
+namespace ServiceBusQueuesLab.Infrastructure
 {
     public static class Program
     {

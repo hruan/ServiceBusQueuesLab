@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.ServiceBus.Messaging;
 
-namespace ServiceBusLab.Contracts
+namespace ServiceBusQueuesLab.Contracts
 {
     public interface IQueueFactory
     {
