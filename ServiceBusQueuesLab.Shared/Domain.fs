@@ -56,10 +56,11 @@ module Game =
         | Move.Paper, Move.Rock     -> winner
         | x, y                      -> decideOutcomeOf (y, x) (not reversed)
 
-    let WinnerOfRound round = decideOutcomeOf round false
-    let WinnerOfGame game =
+    let private winnerOfRound round = decideOutcomeOf round false
+
+    let OutcomeOf game =
         let outcomes = game
-                       |> Seq.map WinnerOfRound
+                       |> Seq.map winnerOfRound
                        |> Seq.filter (fun outcome -> outcome <> Outcome.Draw)
                        |> Seq.toArray
                        |> Array.partition (fun outcome -> outcome = Outcome.PlayerOneWins)
@@ -68,7 +69,8 @@ module Game =
         | x, y when x = y -> (Outcome.Draw, 0)
         | x, y when x < y -> (Outcome.PlayerTwoWins, snd roundsWon)
         | x, y when x > y -> (Outcome.PlayerOneWins, fst roundsWon)
-    let WinnerIdOfGame (game: GameData) outcome =
+
+    let WinnerOf (game: GameData) outcome =
         match outcome with
         | Outcome.Draw -> System.String.Empty
         | Outcome.PlayerOneWins -> fst game.Participants
