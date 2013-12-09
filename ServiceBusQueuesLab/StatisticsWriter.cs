@@ -5,9 +5,9 @@ using ServiceBusQueuesLab.Shared.Domain;
 
 namespace ServiceBusQueuesLab
 {
-    public class GameStatisticsWriter : IGameStatisticsWriter
+    public class StatisticsWriter : IStatisticsWriter
     {
-        public Task WriteAsync(string entity, GameStatistics result)
+        public Task WriteAsync(string entity, GameStatistics statistics)
         {
             throw new NotImplementedException();
         }

@@ -19,7 +19,7 @@ namespace ServiceBusQueuesLab.Infrastructure
 
         private static void Run(IQueueFactory queueFactory)
         {
-            var processor = new MessageProcessor(new StatisticsProcesser(), new GameStatisticsWriter());
+            var processor = new MessageProcessor(new StatisticsProcesser(), new StatisticsWriter());
             var q = queueFactory.Create();
             q.OnMessageAsync(processor.ProcessMessageAsync, new OnMessageOptions {AutoComplete = false});
         }

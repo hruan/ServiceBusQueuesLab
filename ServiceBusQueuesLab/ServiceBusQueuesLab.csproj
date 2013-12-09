@@ -53,9 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="StatisticsProcesser.cs" />
-    <Compile Include="GameStatisticsWriter.cs" />
+    <Compile Include="StatisticsWriter.cs" />
     <Compile Include="Contracts\IStatisticsProcesser.cs" />
-    <Compile Include="Contracts\IGameStatisticsWriter.cs" />
+    <Compile Include="Contracts\IStatisticsWriter.cs" />
     <Compile Include="Contracts\IQueueFactory.cs" />
     <Compile Include="MessageProcessor.cs" />
     <Compile Include="Infrastructure\Program.cs" />

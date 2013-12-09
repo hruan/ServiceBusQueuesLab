@@ -8,9 +8,9 @@ namespace ServiceBusQueuesLab
     public class MessageProcessor
     {
         private readonly IStatisticsProcesser _processer = new StatisticsProcesser();
-        private readonly IGameStatisticsWriter _writer = new GameStatisticsWriter();
+        private readonly IStatisticsWriter _writer = new StatisticsWriter();
 
-        public MessageProcessor(IStatisticsProcesser processer, IGameStatisticsWriter writer)
+        public MessageProcessor(IStatisticsProcesser processer, IStatisticsWriter writer)
         {
             _processer = processer;
             _writer = writer;
@@ -23,7 +23,7 @@ namespace ServiceBusQueuesLab
 
         private static Task ActualProcessAsync(
             IStatisticsProcesser processer,
-            IGameStatisticsWriter writer,
+            IStatisticsWriter writer,
             BrokeredMessage message)
         {
             throw new NotImplementedException();
