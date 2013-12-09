@@ -1,5 +1,4 @@
 ﻿using Microsoft.ServiceBus.Messaging;
-using Microsoft.WindowsAzure;
 using ServiceBusQueuesLab.Contracts;
 
 namespace ServiceBusQueuesLab

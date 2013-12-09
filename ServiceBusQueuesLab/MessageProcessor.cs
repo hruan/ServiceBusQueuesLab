@@ -21,7 +21,7 @@ namespace ServiceBusQueuesLab
             return ActualProcessAsync(_processer, _writer, message);
         }
 
-        private static async Task ActualProcessAsync(
+        private static Task ActualProcessAsync(
             IStatisticsProcesser processer,
             IGameStatisticsWriter writer,
             BrokeredMessage message)
